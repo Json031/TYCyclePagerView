@@ -600,7 +600,7 @@ NS_INLINE TYIndexSection TYMakeIndexSection(NSInteger index, NSInteger section) 
         dispatch_async(dispatch_get_main_queue(), ^{
             if (weakSelf.numberOfItems > 0 && !weakSelf.didLayout) {
                 weakSelf.didLayout = YES;
-                [self setNeedUpdateLayout];
+                [weakSelf setNeedUpdateLayout];
             }
         });
     }
